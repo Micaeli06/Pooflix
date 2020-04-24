@@ -1,6 +1,8 @@
 package app;
 
-public class Actor extends Persona{
+import java.util.List;
+
+public class Actor extends Persona implements INominable {
 
     private String nombre;
 
@@ -8,8 +10,22 @@ public class Actor extends Persona{
         return this.nombre;
     }
 
-    public void setNombre( String nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+//METODOS
+    public boolean ganoPreviamente() {
+        // Acá va la lógica para ver si está en 
+        //una base de datos de ganadores previos
+        return false;
+    }
+
+    public void reproducirTrailerNominacion() {
+       
+    }
+
+    public void secarSelfie(List<Actor> elenco) {
+        
     }
     
 
