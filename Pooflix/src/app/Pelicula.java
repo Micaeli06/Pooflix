@@ -4,9 +4,13 @@ import java.util.List;
 
 public class Pelicula extends Contenido implements INominable {
 
+    // ATRIBUTOS
+
+    private String nombre;
     private Director director;
     private int duracionEnMinutos;
 
+    // Getter y Setter
     public Director getDirector() {
         return director;
     }
@@ -23,19 +27,28 @@ public class Pelicula extends Contenido implements INominable {
         this.duracionEnMinutos = duracionEnMinutos;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    // METODOS
     public boolean ganoPreviamente() {
-        // TODO Auto-generated method stub
         return false;
     }
 
     public void reproducirTrailerNominacion() {
-        // TODO Auto-generated method stub
-
+        System.out.println("Reproduciendo trailer pelicula" + this.getNombre());
     }
 
     public void secarSelfie(List<Actor> elenco) {
-        // TODO Auto-generated method stub
+    }
 
+    public boolean estaNominada() {
+        return false;
     }
 
 }
