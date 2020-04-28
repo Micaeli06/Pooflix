@@ -2,6 +2,10 @@ package app;
 
 import java.util.List;
 
+import app.personas.*;
+/*import app.personas.Actor; / esto es lo mismo que import app.personas.*;
+import app.personas.Director;*/
+
 public class Pelicula extends Contenido implements INominable {
 
     // ATRIBUTOS
@@ -44,11 +48,10 @@ public class Pelicula extends Contenido implements INominable {
         System.out.println("Reproduciendo trailer pelicula" + this.getNombre());
     }
 
-    public void secarSelfie(List<Actor> elenco) {
+    public void sacarSelfie(List<Actor> elenco) {
     }
 
     public boolean estaNominada() {
         return false;
     }
-
 }

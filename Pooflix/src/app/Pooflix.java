@@ -3,6 +3,8 @@ package app;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.personas.Actor;
+
 public class Pooflix {
 
     public List<Pelicula> peliculas = new ArrayList<>();
@@ -26,14 +28,14 @@ public class Pooflix {
 
     private void inicializarPelis() {
         Pelicula peli = new Pelicula();
-        peli.setNombre("Diario de una pasion");
+        peli.setNombre(" Diario de una pasion ");
         Actor actor = new Actor();
         actor.setNombre("Ryan");
 
         this.peliculas.add(peli);
 
         peli = new Pelicula();
-        peli.setNombre("Harry Potter");
+        peli.setNombre(" Harry Potter ");
         actor = new Actor();
         actor.setNombre("Daniel");
 
@@ -102,7 +104,7 @@ public class Pooflix {
 
         for (Pelicula peli : this.peliculas) {
             this.nominados.add(peli);
-            for (Actor actor : peli.getElenco()) // RECORRO LOS ACTORES PARA AGREGARLOS A LISTA DE NOMINADOS
+            for (Actor actor : peli.getElenco()) // RECORRO LOS ACTORES PARA AGREGARLOS A LA LISTA
                 this.nominados.add(actor);
 
         }
@@ -115,8 +117,18 @@ public class Pooflix {
 
     public void reproducirTrailersDeNominacion() {
         for (INominable nominado : nominados) {
+
             nominado.reproducirTrailerNominacion();
+
         }
     }
 
+    public void reproducirTrailersDeNominacionDePeliculas() {
+        for (INominable nominado : nominados) {
+            if (nominado instanceof Pelicula) {
+                nominado.reproducirTrailerNominacion();
+            }
+        }
+
+    }
 }

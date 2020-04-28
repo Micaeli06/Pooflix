@@ -1,6 +1,8 @@
-package app;
+package app.personas;
 
 import java.util.List;
+
+import app.INominable;
 
 public class Actor extends Persona implements INominable {
 
@@ -24,7 +26,7 @@ public class Actor extends Persona implements INominable {
         System.out.println( "Reproduciendo trailer pelicula" + this.getNombre());
     }
 
-    public void secarSelfie(List<Actor> elenco) {
+    public void sacarSelfie(List<Actor> elenco) {
         
     }
 
